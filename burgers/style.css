@@ -1,50 +1,145 @@
 body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    line-height: 1.6;
-  }
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+}
+
+header, nav {
+  background-image: url("images/header.png"); /* Using the same image for both sections */
+  background-size: cover; /* The image will cover the entire area */
+  background-position: center; /* Position the image at the center */
+  width: 100%; /* Make the background cover the full width */
+}
+
+header {
+  color: #fff;
+  text-align: center;
+  padding: 10px;
+  height: 500px; /* Adjust the height for the header image */
+  background-color: rgba(51, 51, 51, 0.5); /* Dark overlay */
+  margin-top: 0; /* Remove any margin */
+}
+
+nav {
   
-  header {
-    background-color: #333;
-    color: #fff;
-    text-align: center;
-    padding: 10px;
-    background-image: url("images/header.png");
-    background-size: cover;
-    background-position: center 60%;
-    height: 200px;
-    
-  }
-  
-  nav {
-    background-color: #444;
-    padding: 0.5rem;
-    text-align: center;
-  }
-  
-  nav a {
-    color: #fff;
-    margin: 0 15px;
-    text-decoration: none;
-    font-size: 1.1rem;
-  }
-  
-  main {
-    padding: 2rem;
-    text-align: center;
-  }
-  
-  section {
-    margin: 2rem 0;
-  }
-  
-  footer {
-    background-color: #333;
-    color: #fff;
-    text-align: center;
-    padding: 1rem 0;
-    position: relative;
-    bottom: 0;
-    width: 100%;
-  }
+  display: flex; /* Use flexbox to align items */
+  align-items: center; /* Vertically center the nav items */
+  padding: 0.5rem;
+  position: relative;
+  z-index: 10; /* Keep the nav on top of the header */
+}
+
+nav .logo {
+  height: 120px;
+  width: 120px;
+  margin-right: auto; /* Push the buttons to the right */
+}
+
+nav button {
+  color: #ffffff;
+  margin: 0 10px; /* Adds consistent space between buttons */
+  text-decoration: none;
+  font-size: 1.1rem;
+  background-color: rgba(51, 51, 51, 0.8); /* Transparent background for buttons */
+  padding: 6px;
+  transition: background-color 0.3s, transform 0.2s; /* Smooth transition */
+}
+
+nav button:hover {
+  background-color: #333; /* Change background on hover */
+  transform: scale(1.1); /* Slightly enlarge button on hover */
+}
+
+main {
+  box-sizing: border-box;
+  padding: 2rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+  width: 100%;
+}
+
+section.menu {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  width: 100%;
+  max-width: 1000px;
+  margin-bottom: 40px;
+}
+
+.menu-card {
+  background-color: white;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.menu-card:hover {
+  transform: translateY(-5px);
+}
+
+.menu-card h2 {
+  font-size: 1.5em;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.menu-card p {
+  font-size: 1em;
+  margin-bottom: 8px;
+}
+
+.price {
+  font-weight: bold;
+  color: #e67e22;
+  font-size: 1.2em;
+}
+
+article {
+  background-color: #fff;
+  border: 2px solid #e67e22;
+  border-radius: 10px;
+  padding: 20px;
+  margin-bottom: 20px;
+  width: 90%;
+  max-width: 600px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+article:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+article h2 {
+  color: #e67e22;
+  font-size: 1.8em;
+  margin-bottom: 10px;
+}
+
+article p {
+  font-size: 1.1em;
+  line-height: 1.6;
+}
+
+footer {
+  background-color: #bfa160;
+  color: #fff;
+  text-align: right;
+  padding: 1rem 0;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+}
+
+footer p {
+  padding-right: 20px;
+  font-size: 15px;
+}
