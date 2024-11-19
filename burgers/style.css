@@ -3,9 +3,11 @@ body {
   margin: 0;
   padding: 0;
   line-height: 1.6;
+  overflow-x: hidden; /* Prevent horizontal scroll */
+  background-image: url("");
 }
 
-header, nav {
+header {
   background-image: url("images/header.png"); /* Using the same image for both sections */
   background-size: cover; /* The image will cover the entire area */
   background-position: center; /* Position the image at the center */
@@ -16,13 +18,13 @@ header {
   color: #fff;
   text-align: center;
   padding: 10px;
-  height: 500px; /* Adjust the height for the header image */
+  height: 300px; /* Adjust the height for the header image */
   background-color: rgba(51, 51, 51, 0.5); /* Dark overlay */
   margin-top: 0; /* Remove any margin */
 }
 
 nav {
-  
+  background-color: black;
   display: flex; /* Use flexbox to align items */
   align-items: center; /* Vertically center the nav items */
   padding: 0.5rem;
