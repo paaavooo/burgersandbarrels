@@ -6,15 +6,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Burgers and Barrels</title>
     <link rel="stylesheet" href="style.css"> <!-- Link to external CSS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bokor&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Protest+Revolution&display=swap" rel="stylesheet">
+
 </head>
 <body>
-   <!-- Navigation Bar -->
-   <nav>
-        
-    <button href="#menu">Menu</button>
-    <button href="#about">About Us</button>
-    <button href="#contact">Contact</button>
-</nav>
+   
 
     <!-- Header -->
     <header>
@@ -25,10 +24,21 @@
         </div>
     </header>
 
-   
+   <!-- Navigation Bar -->
+   <nav>
+        
+    <button href="#menu">Menu</button>
+    <button href="#about">About Us</button>
+    <button href="#contact">Contact</button>
+</nav>
 
     <!-- Main Content -->
     <main>
+      <section class="menu-title">
+        <h2>Food Menu</h2>
+      </section>
+
+
       <section class="menu">
           <!-- Kortit -->
           <div class="menu-card">
@@ -72,18 +82,76 @@
               <p class="price">12,90 €</p>
           </div>
       </section>
-  
-      <!-- About Us -->
-      <section class="about" id="about">
-          <h2>About Us</h2>
-          <p>Burgers and Barrels is dedicated to serving delicious burgers paired with the perfect craft beer experience.</p>
+      <!-- Drinks Otsikko -->
+
+      <section class="drinks-title">
+        <h2>Drinks</h2>
       </section>
-  
-      <!-- Contact Us -->
-      <section class="contact" id="contact">
-          <h2>Contact Us</h2>
-          <p>Visit us at Main Street, Cityville, or give us a call at (123) 456-7890.</p>
+
+    <!-- Juomien lista -->
+      <section class="drinks-menu">
+        <div class="menu-card">
+            <h2>Craft Beer</h2>
+            <p>Paikallinen käsityöläisolut.</p>
+            <p class="price">6,50 €</p>
+        </div>
+        <div class="menu-card">
+            <h2>Soda</h2>
+            <p>Valitse limonadi: cola, limonadi, appelsiini.</p>
+            <p class="price">3,00 €</p>
+        </div>
+        <div class="menu-card">
+            <h2>Fresh Juice</h2>
+            <p>Tuoremehu: appelsiini, omena, karpalo.</p>
+            <p class="price">4,00 €</p>
+        </div>
+        <div class="menu-card">
+            <h2>Iced Tea</h2>
+            <p>Raikas jäätee valitsemallasi maulla.</p>
+            <p class="price">3,50 €</p>
+        </div>
+        <div class="menu-card">
+          <h2>Lemonade</h2>
+          <p>Makea ja raikas limonadi, täydellinen janoon.</p>
+          <p class="price">3,50 €</p>
+      </div>
+      <div class="menu-card">
+          <h2>Milkshake</h2>
+          <p>Vaniljainen maidokoktaili, makea ja täyteläinen.</p>
+          <p class="price">5,00 €</p>
+      </div>
+      <div class="menu-card">
+          <h2>Hot Coffee</h2>
+          <p>Tuore, kuuma kahvi, täydellinen lisä burgerille.</p>
+          <p class="price">3,00 €</p>
+      </div>
+      <div class="menu-card">
+          <h2>Iced Coffee</h2>
+          <p>Raikas jääkahvi, makeutettu ja jäädytetty.</p>
+          <p class="price">4,00 €</p>
+      </div>
+
       </section>
+
+
+
+
+
+  
+      <!-- About and Contact sections next to each other at the bottom -->
+<section class="bottom-sections">
+  <div class="about-card">
+      <h2>About Us</h2>
+      <p>Burgers and Barrels is dedicated to serving delicious burgers paired with the perfect craft beer experience.</p>
+  </div>
+
+  <div class="contact-card">
+      <h2>Contact Us</h2>
+      <p>Visit us at Main Street, Cityville, or give us a call at (123) 456-7890.</p>
+  </div>
+</section>
+
+
   </main>
 
  
