@@ -8,60 +8,83 @@
     <link rel="stylesheet" href="style.css"> <!-- Link to external CSS -->
 </head>
 <body>
+   <!-- Navigation Bar -->
+   <nav>
+        
+    <button href="#menu">Menu</button>
+    <button href="#about">About Us</button>
+    <button href="#contact">Contact</button>
+</nav>
 
     <!-- Header -->
     <header>
-        <h1>Burgers and Barrels</h1>
-        <p>Your go-to place for the best burgers and brews in town!</p>
+        <img src="images/BB_vector.png" alt="Logo" class="logo">
+        <div class="text-content">
+          <h1>Burgers and Barrels</h1>
+          <p>Your go-to place for the best burgers and brews in town!</p>
+        </div>
     </header>
 
-    <!-- Navigation Bar -->
-    <nav>
-        <img src="images/BB_vector.png" alt="Logo" class="logo">
-        <button href="#menu">Menu</button>
-        <button href="#about">About Us</button>
-        <button href="#contact">Contact</button>
-    </nav>
+   
 
     <!-- Main Content -->
     <main>
-        <section class="menu">
-            <div class="menu-card">
+      <section class="menu">
+          <!-- Kortit -->
+          <div class="menu-card">
               <h2>Classic Burger</h2>
               <p>Mehevä pihvi, cheddar-juusto, salaatti, tomaatti ja erikoiskastike. </p>
               <p class="price">10,90 €</p>
-            </div>
-        
-            <div class="menu-card">
+          </div>
+          <div class="menu-card">
               <h2>BBQ Bacon Burger</h2>
               <p>Naudanpihvi, pekonia, BBQ-kastike, cheddar ja sipulirenkaita.</p>
               <p class="price">12,90 €</p>
-            </div>
-        
-            <div class="menu-card">
-              <h2>Veggie burger that most likely ruins your day</h2>
+          </div>
+          <div class="menu-card">
+              <h2>Veggie Burger</h2>
               <p>Kasvispihvi, hummusta, hummusta, hummusta ja bataattihummusta.</p>
               <p class="price">11,50 €</p>
-            </div>
-        
-            <div class="menu-card">
+          </div>
+          <div class="menu-card">
               <h2>Spicy Jalapeño Burger</h2>
               <p>Naudanpihvi, jalapeñoja, mausteinen kastike, cheddar ja salaatti.</p>
               <p class="price">12,50 €</p>
-            </div>
-          </section>
-
-          <article id="about">
-            <h2>About Us</h2>
-            <p>Burgers and Barrels is dedicated to serving delicious burgers paired with the perfect craft beer experience.</p>
-        </article>
-    
-        <article id="contact">
-            <h2>Contact Us</h2>
-            <p>Visit us at Main Street, Cityville, or give us a call at (123) 456-7890.</p>
-        </article>
-    
-    </main>
+          </div>
+          <div class="menu-card">
+              <h2>Cheese Lover's Burger</h2>
+              <p>Pihvi kolmella juustolla: cheddar, gouda ja mozzarella.</p>
+              <p class="price">13,90 €</p>
+          </div>
+          <div class="menu-card">
+              <h2>Fish Burger</h2>
+              <p>Herkullinen kala-pihvi, tartarkastike ja raikas salaatti.</p>
+              <p class="price">11,90 €</p>
+          </div>
+          <div class="menu-card">
+              <h2>Double Trouble Burger</h2>
+              <p>Kaksi naudanpihviä, tuplajuusto ja tuplamaku!</p>
+              <p class="price">14,50 €</p>
+          </div>
+          <div class="menu-card">
+              <h2>Chicken Avocado Burger</h2>
+              <p>Broilerifile, avokado, tomaatti ja talon kastike.</p>
+              <p class="price">12,90 €</p>
+          </div>
+      </section>
+  
+      <!-- About Us -->
+      <section class="about" id="about">
+          <h2>About Us</h2>
+          <p>Burgers and Barrels is dedicated to serving delicious burgers paired with the perfect craft beer experience.</p>
+      </section>
+  
+      <!-- Contact Us -->
+      <section class="contact" id="contact">
+          <h2>Contact Us</h2>
+          <p>Visit us at Main Street, Cityville, or give us a call at (123) 456-7890.</p>
+      </section>
+  </main>
 
  
     <!-- Footer -->

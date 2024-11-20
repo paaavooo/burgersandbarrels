@@ -1,81 +1,103 @@
+/* Yleiset tyylit */
 body {
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
   line-height: 1.6;
-  overflow-x: hidden; /* Prevent horizontal scroll */
+  overflow-x: hidden; /* Poistetaan vaakasuuntainen vieritys */
   background-image: url("images/seina2.jpg");
-  background-size: cover; /* Make the image cover the entire viewport */
-  background-repeat: no-repeat; /* Prevent tiling */
-  background-position: center; /* Center the image */
-  height: 100vh; /* Set the body height to the full viewport */
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  color: #333;
 }
 
-
+/* Header-osio */
 header {
-  background-image: url("images/header.png"); /* Using the same image for both sections */
-  background-size: cover; /* The image will cover the entire area */
-  background-position: center; /* Position the image at the center */
-  width: 100%; /* Make the background cover the full width */
+  position: relative;
+  display: flex;
+  align-items: center; /* Keskittää sisällön pystysuunnassa */
+  justify-content: center; /* Keskittää sisällön vaakasuunnassa */
+  padding: 20px;
+  height: 300px;
+  background-color: rgba(0, 0, 0, 0.8); /* Tumma läpinäkyvä tausta */
+  flex-wrap: wrap; /* Sallii joustavan sisällön */
+  background-image: url("images/header.png");
+  background-size: cover; /* Kuvan koko täyttämään koko alue */
+  background-position: center 55%; /* Keskittää kuvan ja siirtää sitä hieman ylöspäin */
+  
 }
 
-header {
-  color: #fff;
-  text-align: center;
-  padding: 10px;
-  height: 300px; /* Adjust the height for the header image */
-  background-color: rgba(51, 51, 51, 0.5); /* Dark overlay */
-  margin-top: 0; /* Remove any margin */
+/* Logo vasemmalle */
+header .logo {
+  width: 400px; /* Suurempi kuva työpöydällä */
+  height: auto; /* Säilyttää mittasuhteet */
+  position: absolute;
+  left: 150px; /* Kiinnitetään logo vasempaan laitaan */
+  top: 50%;
+  transform: translateY(-50%); /* Pystykeskitys */
 }
 
+/* Keskitetty tekstisisältö */
+header .text-content {
+  flex: 1;
+  text-align: center; /* Tekstit keskitetty */
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+header h1 {
+  color: white;
+  font-size: 3rem; /* Suurempi otsikko työpöydällä */
+  margin: 0;
+}
+
+header p {
+  color: white;
+  font-size: 1.5rem; /* Suurempi kappaleteksti työpöydällä */
+  margin-top: 10px;
+}
+
+/* Navigaatiopalkki */
 nav {
   background-color: black;
-  display: flex; /* Use flexbox to align items */
-  align-items: center; /* Vertically center the nav items */
-  padding: 0.5rem;
-  position: relative;
-  z-index: 10; /* Keep the nav on top of the header */
-}
-
-nav .logo {
-  height: 120px;
-  width: 120px;
-  margin-right: auto; /* Push the buttons to the right */
+  display: flex;
+  justify-content: center; /* Keskittää navigaation */
+  align-items: center;
+  flex-wrap: wrap;
+  
 }
 
 nav button {
-  color: #ffffff;
-  margin: 0 10px; /* Adds consistent space between buttons */
-  text-decoration: none;
-  font-size: 1.1rem;
-  background-color: rgba(51, 51, 51, 0.8); /* Transparent background for buttons */
-  padding: 6px;
-  transition: background-color 0.3s, transform 0.2s; /* Smooth transition */
+  background-color: rgba(255, 255, 255, 0.2);
+  color: white;
+  border: 1.5px solid white;
+  border-radius: 5px;
+  padding: 10px 15px;
+  margin: 30px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
 }
 
 nav button:hover {
-  background-color: #333; /* Change background on hover */
-  transform: scale(1.1); /* Slightly enlarge button on hover */
+  background-color: #e67e22;
+  transform: scale(1.1);
 }
 
+/* Pääsisältö */
 main {
-  box-sizing: border-box;
-  padding: 2rem;
+  padding: 20px;
   text-align: center;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  min-height: 100vh;
-  width: 100%;
 }
 
 section.menu {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 20px;
-  width: 100%;
-  max-width: 1000px;
-  margin-bottom: 40px;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 .menu-card {
@@ -84,7 +106,7 @@ section.menu {
   border-radius: 8px;
   padding: 20px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease;
+  transition: transform 0.3s;
 }
 
 .menu-card:hover {
@@ -92,61 +114,96 @@ section.menu {
 }
 
 .menu-card h2 {
-  font-size: 1.5em;
-  margin-bottom: 10px;
+  font-size: 1.5rem;
   color: #333;
+  margin-bottom: 10px;
 }
 
 .menu-card p {
-  font-size: 1em;
+  font-size: 1rem;
   margin-bottom: 8px;
 }
 
-.price {
+.menu-card .price {
   font-weight: bold;
   color: #e67e22;
-  font-size: 1.2em;
+  font-size: 1.2rem;
 }
 
+/* Artikkelit */
 article {
-  background-color: #fff;
+  background-color: white;
   border: 2px solid #e67e22;
   border-radius: 10px;
   padding: 20px;
-  margin-bottom: 20px;
-  width: 90%;
-  max-width: 600px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-article:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+  margin: 20px auto;
+  max-width: 800px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: left;
 }
 
 article h2 {
   color: #e67e22;
-  font-size: 1.8em;
+  font-size: 2rem;
   margin-bottom: 10px;
 }
 
 article p {
-  font-size: 1.1em;
-  line-height: 1.6;
+  font-size: 1.1rem;
 }
 
+/* Footer */
 footer {
-  background-color: #bfa160;
-  color: #fff;
-  text-align: right;
-  padding: 1rem 0;
-  position: relative;
-  bottom: 0;
-  width: 100%;
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 10px 0;
 }
 
 footer p {
-  padding-right: 20px;
-  font-size: 15px;
+  font-size: 0.9rem;
+  margin: 0;
+}
+
+/* Responsiiviset tyylit */
+@media screen and (max-width: 768px) {
+  header {
+    height: auto;
+    padding: 10px;
+    flex-direction: column; /* Järjestetään sisältö pystysuuntaan */
+  }
+
+  header .logo {
+    position: relative;
+    margin-bottom: 10px;
+    left: 0;
+    top: 0;
+    transform: none; /* Poistetaan transform mobiilissa */
+  }
+
+  header .text-content {
+    flex: none;
+    text-align: center;
+  }
+
+  header h1 {
+    font-size: 2rem; /* Pienempi otsikko mobiilissa */
+  }
+
+  header p {
+    font-size: 1rem; /* Pienempi kappaleteksti mobiilissa */
+  }
+
+  nav {
+    flex-direction: column; /* Navigaation asettelu pystysuuntaan mobiilissa */
+  }
+
+  nav button {
+    margin: 5px 0;
+    width: 90%;
+  }
+
+  section.menu {
+    grid-template-columns: 1fr; /* Yksi sarake mobiilissa */
+  }
 }
