@@ -1,6 +1,9 @@
+html {
+  font-family: "Oswald", sans-serif;
+}
+
 /* Yleiset tyylit */
 body {
-  font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
   line-height: 1.6;
@@ -13,54 +16,43 @@ body {
   position: relative; /* Sijoittaa mahdollisen tummennuskerroksen */
 }
 
-body::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.1); /* Tumma läpinäkyvä tausta */
-  z-index: -1; /* Tummennuskerros on taustalla */
-}
-
 /* Header-osio */
 header {
-  position: relative;
   display: flex;
-  align-items: center; /* Keskittää sisällön pystysuunnassa */
-  justify-content: center; /* Keskittää sisällön vaakasuunnassa */
-  padding: 20px;
-  height: 300px;
-  flex-wrap: wrap; /* Sallii joustavan sisällön */
-  background-image: url("images/header.png");
-  background-size: cover; /* Kuvan koko täyttämään koko alue */
-  background-position: center 55%; /* Keskittää kuvan ja siirtää sitä hieman ylöspäin */
+  align-items: center; /* Keskittää elementit pystysuunnassa */
+  padding: 10px 10px;
+  background-color: #000;
 }
 
-header::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.2); /* Tumma läpinäkyvä tausta */
-  z-index: 0; /* Tummennuskerros on taustalla */
-}
-
-/* Logo vasemmalle */
 header .logo {
-  width: 400px; /* Suurempi kuva työpöydällä */
-  height: auto; /* Säilyttää mittasuhteet */
-  position: absolute;
-  left: 150px; /* Kiinnitetään logo vasempaan laitaan */
-  top: 50%;
-  transform: translateY(-50%); /* Pystykeskitys */
-  z-index: 1; /* Logo on päällä tummennuksen */
+  width: 250px; /* Suurempi logo */
+  margin-right: 18px; /* Etäisyys navigointiin */
 }
 
-/* Keskitetty tekstisisältö */
+/* Sosiaalisen median ikonit */
+header .social-icons {
+  display: flex;
+  gap: 17px; /* Etäisyys ikonien välillä */
+}
+
+header .social-icons a {
+  color: white;
+  font-size: 1.5rem;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+header .social-icons a:hover {
+  color: #e67e22; /* Hover-väri */
+}
+
+.bblogo {
+  width: 500px; /* Adjust the width to make the image smaller */
+  height: 500px; /* Maintain aspect ratio */
+  transform: translateY(-40px);
+  
+}
+
 header .text-content {
   flex: 1;
   text-align: center; /* Tekstit keskitetty */
@@ -70,68 +62,82 @@ header .text-content {
   z-index: 1; /* Tekstit ovat päällä tummennuksen */
 }
 
-header h1 {
-  
-  font-family: "Bokor", system-ui;
-  font-weight: 400;
-  font-style: normal;
-  
-  color: white;
-  font-size: 5rem; /* Suurempi otsikko työpöydällä */
-  margin: 0;
-}
-
-header p {
-  font-family: "Protest Revolution", sans-serif; /* Lisää haluamasi fontti */
-  font-weight: 400; /* Voit säätää painon tarpeen mukaan */
-  font-style: normal; /* Voit säätää tyylin tarpeen mukaan */
-  font-optical-sizing: auto; /* Optimaalinen fontin kokosääntö */
-  color: white;
-  font-size: 2rem; /* Suurempi kappaleteksti työpöydällä */
-  margin-top: 10px;
-}
 
 /* Navigaatiopalkki */
 nav {
-  background-color: black;
   display: flex;
-  justify-content: center; /* Keskittää navigaation */
-  align-items: center;
-  
-  position: relative;
-  height: 50px; /* Pienempi korkeus */
+  gap: 18px; /* Etäisyys nappien välillä */
+  padding-right: 20px;
 }
 
-nav::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.2); /* Tumma läpinäkyvä tausta */
-  z-index: -1; /* Tummennuskerros on taustalla */
+/*nav button fontti*/ 
+button {
+  text-decoration: none;
+  font-family: "Oswald", sans-serif;
+  cursor: pointer;
 }
 
 nav button {
-  background-color: rgb(70, 70, 70);
+  background-color: rgb(0, 0, 0);
   color: white;
-  border: 1.5px solid white;
+  border: 1.5px solid rgb(0, 0, 0);
   border-radius: 5px;
-  padding: 10px 35px;
-  margin: 30px; /* Vähentänyt marginaalia nappejen välillä */
-  font-size: 1rem;
+  padding: 10px 10px;
+  font-size: 1.2rem;
+  font-weight: 400;
   cursor: pointer;
-  transition: background-color 0.3s, transform 0.2s;
-  font-family: "Protest Revolution", sans-serif; /* Lisää haluamasi fontti */
-  font-weight: 400; /* Voit säätää painon tarpeen mukaan */
-  font-style: normal; /* Voit säätää tyylin tarpeen mukaan */
-  font-size: 1.5rem;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  text-transform: uppercase;
+  display: inline-block; /* Varmistaa, että napit ovat vierekkäin */
 }
 
 nav button:hover {
-  background-color: #e67e22;
-  transform: scale(1.1);
+  color: #e67e22;
+}
+
+/* Hero image */
+.hero {
+  position: relative;
+  width: 100%;
+  height: 75vh; /* Voit säätää korkeutta tarpeen mukaan */
+  overflow: hidden; /* Piilottaa osittain ulottuvan kuvan */
+  background-image: url("images/header.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.hero::before {
+  content: ''; /* Empty content to create the overlay */
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.2); /* Dark overlay, adjust opacity as needed */
+  z-index: 1; /* Ensure overlay is on top of the background image */
+}
+
+.hero-image {
+  width: 100%;
+  height: 100%;
+}
+
+.hero-text {
+  position: absolute;
+  top: 35%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: white;
+  z-index: 1; /* Teksti on päällä kuvan */
+  text-shadow: #000 1px 0 13px;
+}
+
+.hero-text p {
+  font-size: 1.8rem;
+  margin-top: 10px;
+  transform: translateY(-130px);
 }
 
 
@@ -139,187 +145,287 @@ nav button:hover {
 main {
   padding: 20px;
   text-align: center;
+  background-color: rgba(0, 0, 0, 0.5); /* Tumman läpikuultava tausta */
+  max-width: 60%;
+  margin: auto;
 }
-/* Otsikon tyylit Food Menu ja Drinks */
-section.menu-title,
-section.drinks-title {
-  font-family: "Bokor", system-ui;
+
+/* Otsikon tyylit */
+/* Otsikkojen ulkoasu */
+section.menu-title, section.drinks-title {
   font-weight: 400;
-  font-style: normal;
   text-align: center;
-  margin: 40px 40%;
-  background-color: #000000;
-  padding: 0px 60px;
-  border-radius: 30px;
-  background-color: rgba(0, 0, 0, 0.7); /* Tumma läpinäkyvä tausta */
+  margin: 40px auto;
+  max-width: 50%;
+ 
 
+  border-radius: 30px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Pehmeä varjo otsikolle */
 }
 
-section.menu-title h2,
-section.drinks-title h2 {
+section.menu-title h2, section.drinks-title h2 {
   font-size: 3.5rem;
   color: #e67e22;
   margin-bottom: 20px;
+  text-transform: uppercase; /* Lisää tyylikkään isojen kirjainten efektin */
+  letter-spacing: 2px; /* Lisää välimatkaa kirjainten väliin */
+  
 }
 
-/* Juomien lista */
-section.drinks-menu {
+/* Juomien ja ruokalistojen kortit */
+section.drinks-menu, section.menu {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 20px;
   max-width: 1200px;
   margin: 0 auto;
+  padding: 40px; /* Lisää tilaa korttien ympärille */
 }
 
-section.menu {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 20px;
-  max-width: 1200px;
-  margin: 0 auto;
-}
-
+/* Korttien yleinen ulkoasu */
 .menu-card {
   background-color: #ffffff;
-  border: 3px solid #000000;
+  border: 1px solid hsl(0, 0%, 87%);
   border-radius: 10px;
   padding: 20px;
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15); /* Pehmeämpi varjo */
-  transition: transform 0.3s, box-shadow 0.3s; /* Lisää varjon muutosta */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.08);
+  position: relative;
+  background: url('images/paper.jpg');
+  transition: transform 0.3s, box-shadow 0.3s;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start; /* Varmistaa, että tekstit ovat ylhäällä */
+  height: 300px; /* Kiinteä korkeus, jotta kaikki kortit ovat saman korkuisia */
 }
 
-.menu-card:hover {
-  transform: scale(1.05); /* Skaalautuu hieman suuremmaksi hoverilla */
-  box-shadow: 0 12px 20px rgba(0, 0, 0, 0.15); /* Lisää varjoa hoverilla */
-  background-color: #f9f9f9; /* Vaaleampi tausta hoverilla */
+.icon-container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 10px; /* Väli ikonin ja otsikon välillä */
+  z-index: 2;
+  font-size: 30px;
+  
+  
 }
-
 
 .menu-card h2 {
-  font-family: 'Roboto', sans-serif; /* Käytetään tyylikästä fonttia */
-  font-size: 1.6rem; /* Hieman suurempi otsikko */
+  font-size: 1.6rem;
   color: #333;
+  text-align: center; /* Keskittää otsikon */
   margin-bottom: 10px;
+  z-index: 2;
 }
 
 .menu-card p {
   font-size: 1.1rem;
-  color: #555; /* Hieman vaaleampi väri selkeyttää tekstin lukemista */
+  color: #555;
+  flex-grow: 1; /* Varmistaa, että kuvaus vie tilaa ja hinnat jäävät alas */
+  z-index: 2;
 }
 
 .menu-card .price {
   font-weight: bold;
-  color: #e67e22; /* Kirkas oranssi väri hinnoille */
-  font-size: 1.3rem;
-}
-
-/* About ja Contact osiot */
-section.about,
-section.contact {
-  background-color: rgba(255, 255, 255, 0.8);
-  border: 2px solid #e67e22;
-  border-radius: 10px;
-  padding: 20px;
-  margin: 20px auto;
-  max-width: 800px;
-  text-align: center;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-section.about h2,
-section.contact h2 {
-  font-size: 2rem;
   color: #e67e22;
-  margin-bottom: 10px;
+  font-size: 1.3rem;
+  margin-top: auto; /* Pystysuuntainen tasaus, jotta hinta tulee alas */
 }
 
-section.about p,
-section.contact p {
-  font-size: 1.1rem;
-  color: #333;
-}
+
 
 /* Footer */
 footer {
-  background-color: #333;
-  color: white;
-  text-align: center;
-  padding: 10px 0;
+  background-color: black;
+}
+.footerImage img {
+  position: absolute; /* Allows the image to be positioned relative to the footer container */
+  bottom: 15%; /* Adjust distance from the bottom */
+  right: 7%; /* Adjust distance from the right */
+  max-width: 250px; /* Set a reasonable size for the image */
+  height: auto; /* Maintain aspect ratio */
 }
 
-footer p {
-  font-size: 0.9rem;
-  margin: 0;
+.footercontainer {
+  width: 100%;
+  padding: 30px 20px;
+  position: relative;
 }
+.socialIcons{
+  display: flex;
+  justify-content: center;
+  padding-top: 30px;
+}
+.socialIcons a{
+  text-decoration: none;
+  padding: 10px;
+  background-color: white;
+  margin: 10px;
+  border-radius: 50%;
+}
+.socialIcons a i{
+  font-size: 2em;
+  color: black;
+  opacity: 0.9;
+}
+
+
+/*Footer Hover effect for icons*/
+.socialIcons a:hover{
+  background-color: #e67e22;
+  transition: 0.5s;
+}
+.socialIcons a:hover i{
+  color: white;
+  transition: 0.5s;
+}
+.footerNav{
+  margin: 30px 0;
+  text-decoration: none;
+  width: 100%;
+}
+
+.footerNav ul li{
+  text-decoration: none;
+  list-style-type: none;
+
+}
+.footerNav ul{
+  display: flex;
+  justify-content: center;
+  text-decoration: none;
+  list-style-type: none;
+}
+.footerNav ul li a{
+color: white;
+margin-right: 20px;
+text-decoration: none;
+font-size: 1.3em;
+opacity: 0.7;
+transition: 0.5s;
+}
+.footerNav ul li a:hover{
+  opacity: 1;
+}
+.footerBottom{
+ background-color: #000; 
+ padding: 20px;
+ text-align: center;
+}
+.footerBottom p{
+  color: white;
+}
+
+
 
 /* Responsiiviset tyylit */
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1024px) {
   header {
+    flex-direction: column;
     height: auto;
-    padding: 10px;
-    flex-direction: column; /* Järjestetään sisältö pystysuuntaan */
-  }
-
-  header .logo {
-    position: relative;
-    margin-bottom: 10px;
-    left: 0;
-    top: 0;
-    transform: none; /* Poistetaan transform mobiilissa */
-  }
-
-  header .text-content {
-    flex: none;
-    text-align: center;
+    padding: 15px;
   }
 
   header h1 {
-    font-size: 2rem; /* Pienempi otsikko mobiilissa */
+    font-size: 3rem;
   }
 
   header p {
-    font-size: 1rem; /* Pienempi kappaleteksti mobiilissa */
+    font-size: 1.5rem;
+  }
+
+  header .logo {
+    width: 250px;
+    left: 0;
+    top: 0;
+    margin: 10px auto;
+    transform: none;
+    position: relative;
   }
 
   nav {
-    flex-direction: column; /* Navigaation asettelu pystysuuntaan mobiilissa */
+    flex-direction: column;
+    height: auto;
   }
 
   nav button {
+    font-size: 1rem;
+    padding: 8px 15px;
+  }
+
+  section.menu, section.drinks-menu {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 15px;
+  }
+
+  section.menu-title, section.drinks-title {
+    margin: 20px 10%;
+    padding: 10px;
+  }
+
+  section.about, section.contact {
+    margin: 10px;
+    padding: 15px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  header h1 {
+    font-size: 2rem;
+  }
+
+  header p {
+    font-size: 0.9rem;
+  }
+
+  .menu-card {
+    padding: 10px;
+    font-size: 0.9rem;
+  }
+
+  nav button {
+    font-size: 1rem;
+    padding: 8px 20px;
+  }
+
+  .about-card, .contact-card {
+    width: 100%;
+    margin: 10px 0;
+  }
+
+  .bottom-sections {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+
+@media (max-width: 480px) {
+  footer {
+    text-align: center;
+  }
+
+  .footerNav ul {
+    flex-direction: column;
+    padding: 0;
+  }
+
+  .footerNav ul li {
     margin: 5px 0;
-    width: 90%;
   }
 
-  section.menu {
-    grid-template-columns: 1fr; /* Yksi sarake mobiilissa */
+  .footerNav ul li a {
+    font-size: 1rem; /* Smaller font for better fit */
+    margin: 0;
+  }
+
+  .socialIcons a {
+    font-size: 1.5em; /* Adjust icon size */
+    margin: 5px;
   }
 }
-/* Bottom sections */
-.bottom-sections {
-  display: flex;
-  justify-content: space-around; /* Jakaa tilaa tasaisesti korttien välillä */
-  margin: 20px auto;
-  max-width: 1200px;
+@media (max-width: 768px) {
+  .footerImage img {
+      display: none;
+  }
 }
 
-.about-card, .contact-card {
-  background-color: #333; /* Musta tausta */
-  color: white; /* Valkoinen teksti */
-  padding: 20px;
-  border-radius: 10px;
-  width: 45%; /* Määritetään kortin leveys */
-  text-align: center;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-.about-card h2, .contact-card h2 {
-  font-size: 2rem;
-  color: #e67e22; /* Oranssi väri otsikoille */
-  margin-bottom: 10px;
-}
-
-.about-card p, .contact-card p {
-  font-size: 1.1rem;
-  color: #fff;
-}
 

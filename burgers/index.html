@@ -6,31 +6,39 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Burgers and Barrels</title>
     <link rel="stylesheet" href="style.css"> <!-- Link to external CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Bokor&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Protest+Revolution&display=swap" rel="stylesheet">
-
+    <link href="https://fonts.googleapis.com/css2?family=Geologica:wght@100..900&family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=New+Amsterdam&family=Oswald:wght@200..700&family=Roboto+Slab:wght@100..900&family=Shippori+Antique&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.0/css/all.min.css" integrity="sha512-9xKTRVabjVeZmc+GUW8GgSmcREDunMM+Dt/GrzchfN8tkwHizc5RP4Ok/MXFFy5rIjJjzhndFScTceq5e6GvVQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
    
 
     <!-- Header -->
     <header>
-        <img src="images/BB_vector.png" alt="Logo" class="logo">
-        <div class="text-content">
-          <h1>Burgers and Barrels</h1>
-          <p>Your go-to place for the best burgers and brews in town!</p>
+        <img src="images/BB_text.png" alt="Logo" class="logo">
+        <nav>
+          <a href="#menu"></a><button>MENU</button></a>
+          <a href="#lunch"><button>LUNCH</button></a>
+          <a href="#about"><button>ABOUT US</button></a>
+          <a href="#contact"><button>CONTACT</button></a>
+        </nav>
+          <div class="social-icons">
+            <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+            <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
         </div>
-    </header>
-
-   <!-- Navigation Bar -->
-   <nav>
         
-    <button href="#menu">Menu</button>
-    <button href="#about">About Us</button>
-    <button href="#contact">Contact</button>
-</nav>
+      </header>
+
+   <!-- Hero Image -->
+   <div class="hero">
+        <div class="hero-text">
+          <img src="images/BBvectorVARJO.png" alt="bblogo" class="bblogo"></img>
+            <p>YOUR GO-TO PLACE FOR THE BEST BURGERS AND BREWS IN TOWN!</p>
+        </div>
+   </div>
 
     <!-- Main Content -->
     <main>
@@ -39,117 +47,174 @@
       </section>
 
 
+      
+      
       <section class="menu">
-          <!-- Kortit -->
-          <div class="menu-card">
-              <h2>Classic Burger</h2>
-              <p>Mehevä pihvi, cheddar-juusto, salaatti, tomaatti ja erikoiskastike. </p>
-              <p class="price">10,90 €</p>
+        <div class="menu-card">
+          <div class="icon-container">
+            <i class="fas fa-hamburger icon"></i>
           </div>
-          <div class="menu-card">
-              <h2>BBQ Bacon Burger</h2>
-              <p>Naudanpihvi, pekonia, BBQ-kastike, cheddar ja sipulirenkaita.</p>
-              <p class="price">12,90 €</p>
+          <h2>Classic Burger</h2>
+          <p>Juicy patty, cheddar cheese, lettuce, tomato, and special sauce.</p>
+          <p class="price">10.90 €</p>
+        </div>
+      
+        <div class="menu-card">
+          <div class="icon-container">
+            <i class="fas fa-bacon icon"></i>
           </div>
-          <div class="menu-card">
-              <h2>Veggie Burger</h2>
-              <p>Kasvispihvi, hummusta, hummusta, hummusta ja bataattihummusta.</p>
-              <p class="price">11,50 €</p>
+          <h2>BBQ Bacon Burger</h2>
+          <p>Beef patty, bacon, BBQ sauce, cheddar, and onion rings.</p>
+          <p class="price">12.90 €</p>
+        </div>
+      
+        <div class="menu-card">
+          <div class="icon-container">
+            <i class="fas fa-leaf icon"></i>
           </div>
-          <div class="menu-card">
-              <h2>Spicy Jalapeño Burger</h2>
-              <p>Naudanpihvi, jalapeñoja, mausteinen kastike, cheddar ja salaatti.</p>
-              <p class="price">12,50 €</p>
+          <h2>Veggie Burger</h2>
+          <p>Vegetable patty, hummus, avocado, tomato, vegan aioli.</p>
+          <p class="price">11.50 €</p>
+        </div>
+      
+        <div class="menu-card">
+          <div class="icon-container">
+            <i class="fas fa-pepper-hot icon"></i>
           </div>
-          <div class="menu-card">
-              <h2>Cheese Lover's Burger</h2>
-              <p>Pihvi kolmella juustolla: cheddar, gouda ja mozzarella.</p>
-              <p class="price">13,90 €</p>
+          <h2>Spicy Jalapeño Burger</h2>
+          <p>Beef patty, jalapeños, spicy sauce, cheddar, and lettuce.</p>
+          <p class="price">12.50 €</p>
+        </div>
+      
+        <div class="menu-card">
+          <div class="icon-container">
+            <i class="fas fa-cheese icon"></i>
           </div>
-          <div class="menu-card">
-              <h2>Fish Burger</h2>
-              <p>Herkullinen kala-pihvi, tartarkastike ja raikas salaatti.</p>
-              <p class="price">11,90 €</p>
+          <h2>Cheese Lover's Burger</h2>
+          <p>Patty with three types of cheese: cheddar, gouda, and mozzarella.</p>
+          <p class="price">13.90 €</p>
+        </div>
+      
+        <div class="menu-card">
+          <div class="icon-container">
+            <i class="fas fa-fish icon"></i>
           </div>
-          <div class="menu-card">
-              <h2>Double Trouble Burger</h2>
-              <p>Kaksi naudanpihviä, tuplajuusto ja tuplamaku!</p>
-              <p class="price">14,50 €</p>
+          <h2>Fish Burger</h2>
+          <p>Delicious fish patty, tartar sauce, and fresh salad.</p>
+          <p class="price">11.90 €</p>
+        </div>
+      
+        <div class="menu-card">
+          <div class="icon-container">
+            <i class="fas fa-hamburger icon"></i>
           </div>
-          <div class="menu-card">
-              <h2>Chicken Avocado Burger</h2>
-              <p>Broilerifile, avokado, tomaatti ja talon kastike.</p>
-              <p class="price">12,90 €</p>
+          <h2>Double Trouble Burger</h2>
+          <p>Two beef patties, double cheese, and double the flavor!</p>
+          <p class="price">14.50 €</p>
+        </div>
+      
+        <div class="menu-card">
+          <div class="icon-container">
+            <i class="fas fa-drumstick-bite icon"></i>
           </div>
+          <h2>Chicken Burger</h2>
+          <p>Chicken fillet, avocado, tomato, and house sauce.</p>
+          <p class="price">12.90 €</p>
+        </div>
       </section>
-      <!-- Drinks Otsikko -->
 
+      
+      <!-- Drinks Title -->
       <section class="drinks-title">
         <h2>Drinks</h2>
       </section>
-
-    <!-- Juomien lista -->
+      
+      
+      <!-- Drinks Menu -->
       <section class="drinks-menu">
         <div class="menu-card">
-            <h2>Craft Beer</h2>
-            <p>Paikallinen käsityöläisolut.</p>
-            <p class="price">6,50 €</p>
+          <div class="icon-container">
+            <i class="fas fa-beer icon"></i>
+          </div>
+          <h2>Pilsner</h2>
+          <p>Clear and crisp beer with a light bitterness.</p>
+          <p class="price">5.50 €</p>
         </div>
+      
         <div class="menu-card">
-            <h2>Soda</h2>
-            <p>Valitse limonadi: cola, limonadi, appelsiini.</p>
-            <p class="price">3,00 €</p>
+          <div class="icon-container">
+            <i class="fas fa-beer icon"></i>
+          </div>
+          <h2>Imperial Stout</h2>
+          <p>Strong and full-bodied stout with hints of chocolate and coffee.</p>
+          <p class="price">7.90 €</p>
         </div>
+      
         <div class="menu-card">
-            <h2>Fresh Juice</h2>
-            <p>Tuoremehu: appelsiini, omena, karpalo.</p>
-            <p class="price">4,00 €</p>
+          <div class="icon-container">
+            <i class="fas fa-beer icon"></i>
+          </div>
+          <h2>IPA</h2>
+          <p>Refreshing and hoppy beer with citrus flavors and bitterness.</p>
+          <p class="price">6.50 €</p>
         </div>
+      
         <div class="menu-card">
-            <h2>Iced Tea</h2>
-            <p>Raikas jäätee valitsemallasi maulla.</p>
-            <p class="price">3,50 €</p>
+          <div class="icon-container">
+            <i class="fas fa-cocktail icon"></i>
+          </div>
+          <h2>Martini</h2>
+          <p>Elegant cocktail with gin and vermouth.</p>
+          <p class="price">8.00 €</p>
         </div>
+      
         <div class="menu-card">
-          <h2>Lemonade</h2>
-          <p>Makea ja raikas limonadi, täydellinen janoon.</p>
-          <p class="price">3,50 €</p>
-      </div>
-      <div class="menu-card">
-          <h2>Milkshake</h2>
-          <p>Vaniljainen maidokoktaili, makea ja täyteläinen.</p>
-          <p class="price">5,00 €</p>
-      </div>
-      <div class="menu-card">
-          <h2>Hot Coffee</h2>
-          <p>Tuore, kuuma kahvi, täydellinen lisä burgerille.</p>
-          <p class="price">3,00 €</p>
-      </div>
-      <div class="menu-card">
-          <h2>Iced Coffee</h2>
-          <p>Raikas jääkahvi, makeutettu ja jäädytetty.</p>
-          <p class="price">4,00 €</p>
-      </div>
-
+          <div class="icon-container">
+            <i class="fas fa-wine-glass icon"></i>
+          </div>
+          <h2>Red Wine</h2>
+          <p>Deep and full-bodied wine that complements the food.</p>
+          <p class="price">7.00 €</p>
+        </div>
+      
+        <div class="menu-card">
+          <div class="icon-container">
+            <i class="fas fa-glass-martini-alt icon"></i>
+          </div>
+          <h2>Margarita</h2>
+          <p>Refreshing citrus cocktail with a salted rim.</p>
+          <p class="price">8.50 €</p>
+        </div>
+      
+        <div class="menu-card">
+          <div class="icon-container">
+            <i class="fas fa-coffee icon"></i>
+          </div>
+          <h2>Cappuccino</h2>
+          <p>Classic coffee drink with foam and milk cream.</p>
+          <p class="price">4.00 €</p>
+        </div>
+      
+        <div class="menu-card">
+          <div class="icon-container">
+            <i class="fas fa-mug-hot icon"></i>
+          </div>
+          <h2>Hot Chocolate</h2>
+          <p>Sweet and rich hot drink, perfect for a winter day.</p>
+          <p class="price">4.50 €</p>
+        </div>
       </section>
+      
+      
+      
 
 
 
 
 
   
-      <!-- About and Contact sections next to each other at the bottom -->
-<section class="bottom-sections">
-  <div class="about-card">
-      <h2>About Us</h2>
-      <p>Burgers and Barrels is dedicated to serving delicious burgers paired with the perfect craft beer experience.</p>
-  </div>
+    
 
-  <div class="contact-card">
-      <h2>Contact Us</h2>
-      <p>Visit us at Main Street, Cityville, or give us a call at (123) 456-7890.</p>
-  </div>
-</section>
 
 
   </main>
@@ -157,7 +222,32 @@
  
     <!-- Footer -->
     <footer>
-        <p>&copy; 2024 Burgers and Barrels. All rights reserved.</p>
+        <div class="footercontainer">
+            <div class="socialIcons">
+                <a href=""><i class="fa-brands fa-facebook"></i></a>
+                <a href=""><i class="fa-brands fa-twitter"></i></a>
+                <a href=""><i class="fa-brands fa-instagram"></i></a>
+            </div>
+            <div class="footerNav">
+                <ul class="no-bullets">
+                    <li><a href="">Home</a></li>
+                    <li><a href="">About</a></li>
+                    <li><a href="">Contact Us</a></li>
+                    <li><a href="">Address</a></li>
+                </ul>
+             
+         </div>
+         <!-- Add image to the footer -->
+        <div class="footerImage">
+          <img src="images/BB vectorW.png" alt="Footer Image" />
+      </div>
+         <div class="footerBottom">
+            <p>&copy; 2024 Burgers and Barrels. All rights reserved.</p>
+        </div> 
+
+
+
+        
     </footer>
 
 </body>
